@@ -15,6 +15,11 @@ export interface themeProps {
 			};
 		};
 	};
+	components: {
+		prefectureArea: {
+			bg: string;
+		};
+	};
 	text: {
 		main: string;
 		sub: string;

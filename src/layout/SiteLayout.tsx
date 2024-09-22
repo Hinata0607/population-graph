@@ -31,10 +31,6 @@ const SLayout = styled.section`
 `;
 
 const SMain = styled.main<SMainProps>`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	width: ${(props) => (props.$isSm ? '100%' : 'calc(100% - 300px)')};
 	height: 100%;
 `;

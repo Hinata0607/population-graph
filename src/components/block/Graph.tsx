@@ -1,3 +1,4 @@
+'use client';
 import { dummyData, graphOptions } from '@/libs';
 import { Line } from 'react-chartjs-2';
 
