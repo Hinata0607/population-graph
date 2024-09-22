@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="jp">
-			<body>
+			<body style={{ backgroundColor: '#121920' }}>
 				<ContextProvider>
 					<SiteLayout>{children}</SiteLayout>
 				</ContextProvider>

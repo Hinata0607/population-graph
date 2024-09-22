@@ -1,5 +1,5 @@
 'use client';
-import { UsePrefectureProps } from '@/interfaces';
+import { PrefectureResponseProps, UsePrefectureProps } from '@/interfaces';
 import { axiosFetch } from '@/libs';
 import { Context } from '@/provider';
 import { useContext } from 'react';
@@ -11,15 +11,20 @@ export const usePrefecture = (): UsePrefectureProps => {
 		throw new Error('Context is not provided');
 	}
 
-	const {} = context;
+	const { prefecrtures, setPrefectures } = context;
 
 	// 都道府県一覧を取得するAPIを実行する関数
 	const handleFetchPrefectures = async (): Promise<void> => {
-		const response = await axiosFetch.get('api/prefectures');
+		const response =
+			await axiosFetch.get<PrefectureResponseProps>('api/prefectures');
 		console.log(response);
+		setPrefectures(response.result);
 	};
 
 	return {
+		prefecrtures,
+		setPrefectures,
+
 		handleFetchPrefectures,
 	};
 };
