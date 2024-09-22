@@ -33,6 +33,7 @@ const SPrefectureSelectSm = styled.section`
 	align-items: start;
 	flex-wrap: wrap;
 	width: 90%;
+	padding: 15px 0;
 	margin: 0 auto;
 	border-radius: 10px;
 	background-color: ${(props) => props.theme.components.prefectureArea.bg};
