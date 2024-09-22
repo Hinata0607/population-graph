@@ -17,7 +17,6 @@ export const usePrefecture = (): UsePrefectureProps => {
 	const handleFetchPrefectures = async (): Promise<void> => {
 		const response =
 			await axiosFetch.get<PrefectureResponseProps>('api/prefectures');
-		console.log(response);
 		setPrefectures(response.result);
 	};
 
