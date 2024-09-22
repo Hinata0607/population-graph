@@ -11,6 +11,7 @@ export interface themeProps {
 			line: string;
 			item: {
 				hoverBg: string;
+				activeBg: string;
 			};
 		};
 	};

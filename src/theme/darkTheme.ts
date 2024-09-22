@@ -13,7 +13,8 @@ export const darkTheme: themeProps = {
 			bg: '#090c10',
 			line: '#283848',
 			item: {
-				hoverBg: '#1f2b38',
+				hoverBg: '#161f28',
+				activeBg: '#233240',
 			},
 		},
 	},
