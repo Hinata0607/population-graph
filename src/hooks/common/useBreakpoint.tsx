@@ -1,5 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 
+// レスポンシブデザインに対応するためのブレークポイントを扱うhooks
 export const useBreakpoint = (): string => {
 	const isXs: boolean = useMediaQuery({ maxWidth: 599.95 });
 	const isSm: boolean = useMediaQuery({ minWidth: 600, maxWidth: 899 });

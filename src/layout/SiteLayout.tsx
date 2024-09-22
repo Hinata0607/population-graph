@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Header, LeftBar } from './section';
 import { useTheme } from '@/hooks';
 
+// サイトに適用するレイアウト
 export const SiteLayout = ({ children }: SiteLayoutProps) => {
 	const { darkTheme } = useTheme();
 
