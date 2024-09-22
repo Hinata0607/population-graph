@@ -5,6 +5,9 @@ export const darkTheme: themeProps = {
 	layout: {
 		header: {
 			bg: '#121920',
+			button: {
+				bg: '#283848',
+			},
 		},
 		leftBar: {
 			bg: '#090c10',
@@ -16,6 +19,7 @@ export const darkTheme: themeProps = {
 	},
 	text: {
 		main: '#ffffff',
+		sub: '#aaaaaa',
 	},
 	bg: '#121920',
 };

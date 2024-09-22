@@ -2,6 +2,9 @@ export interface themeProps {
 	layout: {
 		header: {
 			bg: string;
+			button: {
+				bg: string;
+			};
 		};
 		leftBar: {
 			bg: string;
@@ -13,6 +16,7 @@ export interface themeProps {
 	};
 	text: {
 		main: string;
+		sub: string;
 	};
 	bg: string;
 }
