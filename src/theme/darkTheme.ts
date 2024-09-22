@@ -1,5 +1,6 @@
 import { themeProps } from '@/interfaces';
 
+// サイトのダークテーマ定義
 export const darkTheme: themeProps = {
 	layout: {
 		header: {
