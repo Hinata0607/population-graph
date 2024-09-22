@@ -1,3 +1,4 @@
+'use client';
 import { useMediaQuery } from 'react-responsive';
 
 // レスポンシブデザインに対応するためのブレークポイントを扱うhooks
