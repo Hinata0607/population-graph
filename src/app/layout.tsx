@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { SiteLayout } from '@/layout';
+import { ContextProvider } from '@/provider';
 
 export const metadata: Metadata = {
 	title: 'population-graph',
@@ -16,7 +17,9 @@ export default function RootLayout({
 	return (
 		<html lang="jp">
 			<body>
-				<SiteLayout>{children}</SiteLayout>
+				<ContextProvider>
+					<SiteLayout>{children}</SiteLayout>
+				</ContextProvider>
 			</body>
 		</html>
 	);
