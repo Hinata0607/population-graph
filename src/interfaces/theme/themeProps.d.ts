@@ -6,7 +6,13 @@ export interface themeProps {
 		leftBar: {
 			bg: string;
 			line: string;
+			item: {
+				hoverBg: string;
+			};
 		};
+	};
+	text: {
+		main: string;
 	};
 	bg: string;
 }
