@@ -5,7 +5,8 @@ import { LeftBarItem } from '../block';
 
 export const LeftBar = () => {
 	const { darkTheme } = useTheme();
-	const { prefecrtures, handleSelectPrefectures } = usePrefecture();
+	const { prefecrtures, selectedPrefectures, handleSelectPrefectures } =
+		usePrefecture();
 
 	return (
 		<SLeftBar theme={darkTheme}>
@@ -13,6 +14,11 @@ export const LeftBar = () => {
 				<LeftBarItem
 					key={prefecrtures.prefCode}
 					prefName={prefecrtures.prefName}
+					isSelected={
+						selectedPrefectures
+							? selectedPrefectures.includes(prefecrtures)
+							: false
+					}
 					onClick={() => handleSelectPrefectures(prefecrtures)}
 				/>
 			))}
