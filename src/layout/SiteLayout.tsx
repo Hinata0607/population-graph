@@ -1,19 +1,21 @@
 'use client';
-import { SiteLayoutProps } from '@/interfaces';
+import { SChildrenProps, SiteLayoutProps, SMainProps } from '@/interfaces';
 import styled from 'styled-components';
 import { Header, LeftBar } from './section';
-import { useTheme } from '@/hooks';
+import { useBreakpoint, useTheme } from '@/hooks';
 
 // サイトに適用するレイアウト
 export const SiteLayout = ({ children }: SiteLayoutProps) => {
 	const { darkTheme } = useTheme();
+	const breakpoint = useBreakpoint();
+	const isSm: boolean = ['xs', 'sm'].includes(breakpoint);
 
 	return (
 		<SLayout theme={darkTheme}>
-			<LeftBar />
-			<SMain>
+			{!isSm && <LeftBar />}
+			<SMain $isSm={isSm}>
 				<Header />
-				<SChildren>{children}</SChildren>
+				<SChildren $isSm={isSm}>{children}</SChildren>
 			</SMain>
 		</SLayout>
 	);
@@ -28,16 +30,16 @@ const SLayout = styled.section`
 	background-color: ${(props) => props.theme.bg};
 `;
 
-const SMain = styled.main`
+const SMain = styled.main<SMainProps>`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-grow: 1;
+	width: ${(props) => (props.$isSm ? '100%' : 'calc(100% - 300px)')};
 	height: 100%;
 `;
 
-const SChildren = styled.section`
-	flex-grow: 1;
+const SChildren = styled.section<SChildrenProps>`
+	height: ${(props) => (props.$isSm ? '100%' : 'auto')};
 	width: 100%;
 `;
