@@ -2,13 +2,16 @@
 import { SiteLayoutProps } from '@/interfaces';
 import styled from 'styled-components';
 import { Header, LeftBar } from './section';
+import { useTheme } from '@/hooks';
 
 export const SiteLayout = ({ children }: SiteLayoutProps) => {
+	const { darkTheme } = useTheme();
+
 	return (
-		<SLayout>
-			<Header />
+		<SLayout theme={darkTheme}>
+			<LeftBar />
 			<SMain>
-				<LeftBar />
+				<Header />
 				<SChildren>{children}</SChildren>
 			</SMain>
 		</SLayout>
@@ -17,24 +20,23 @@ export const SiteLayout = ({ children }: SiteLayoutProps) => {
 
 const SLayout = styled.section`
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	height: 100vh;
-	background-color: #ada;
+	background-color: ${(props) => props.theme.bg};
 `;
 
 const SMain = styled.main`
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	flex-grow: 1;
-	width: 100%;
+	height: 100%;
 `;
 
 const SChildren = styled.section`
 	flex-grow: 1;
-	height: 100%;
-	background-color: #ddd;
+	width: 100%;
 `;

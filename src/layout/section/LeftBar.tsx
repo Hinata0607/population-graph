@@ -1,7 +1,11 @@
+'use client';
+import { useTheme } from '@/hooks';
 import styled from 'styled-components';
 
 export const LeftBar = () => {
-	return <SLeftBar></SLeftBar>;
+	const { darkTheme } = useTheme();
+
+	return <SLeftBar theme={darkTheme}></SLeftBar>;
 };
 
 const SLeftBar = styled.section`
@@ -11,5 +15,7 @@ const SLeftBar = styled.section`
 	alignitems: center;
 	width: 300px;
 	height: 100%;
-	background-color: #dad;
+	border-right: solid 2px ${(props) => props.theme.layout.leftBar.line};
+	border-radius: 0 20px 20px 0;
+	background-color: ${(props) => props.theme.layout.leftBar.bg};
 `;

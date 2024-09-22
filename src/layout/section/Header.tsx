@@ -1,7 +1,11 @@
+'use client';
+import { useTheme } from '@/hooks';
 import styled from 'styled-components';
 
 export const Header = () => {
-	return <SHeader></SHeader>;
+	const { darkTheme } = useTheme();
+
+	return <SHeader theme={darkTheme}></SHeader>;
 };
 
 const SHeader = styled.header`
@@ -10,5 +14,5 @@ const SHeader = styled.header`
 	align-items: center;
 	width: 100%;
 	height: 60px;
-	background-color: #add;
+	background-color: ${(props) => props.theme.layout.header.bg};
 `;
