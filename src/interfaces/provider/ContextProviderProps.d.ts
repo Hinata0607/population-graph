@@ -6,6 +6,10 @@ export interface ContextProviderProps {
 	setPrefectures: React.Dispatch<
 		React.SetStateAction<PrefectureProps[] | null>
 	>;
+	selectedPrefectures: PrefectureProps[] | null;
+	setSelectedPrefectures: React.Dispatch<
+		React.SetStateAction<PrefectureProps[] | null>
+	>;
 
 	darkTheme: themeProps;
 }
