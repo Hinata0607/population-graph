@@ -18,6 +18,11 @@ export const darkTheme: themeProps = {
 			},
 		},
 	},
+	components: {
+		prefectureArea: {
+			bg: '#161f28',
+		},
+	},
 	text: {
 		main: '#ffffff',
 		sub: '#aaaaaa',
