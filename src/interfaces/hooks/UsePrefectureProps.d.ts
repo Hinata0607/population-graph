@@ -5,6 +5,11 @@ export interface UsePrefectureProps {
 	setPrefectures: React.Dispatch<
 		React.SetStateAction<PrefectureProps[] | null>
 	>;
+	selectedPrefectures: PrefectureProps[] | null;
+	setSelectedPrefectures: React.Dispatch<
+		React.SetStateAction<PrefectureProps[] | null>
+	>;
 
 	handleFetchPrefectures: () => Promise<void>;
+	handleSelectPrefectures: (prefecture: PrefectureProps) => void;
 }

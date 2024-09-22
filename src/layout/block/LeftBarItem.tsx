@@ -3,10 +3,14 @@ import { useTheme } from '@/hooks';
 import { LeftBarItemProps } from '@/interfaces';
 import styled from 'styled-components';
 
-export const LeftBarItem = ({ prefName }: LeftBarItemProps) => {
+export const LeftBarItem = ({ prefName, onClick }: LeftBarItemProps) => {
 	const { darkTheme } = useTheme();
 
-	return <SLeftBarItem theme={darkTheme}>{prefName}</SLeftBarItem>;
+	return (
+		<SLeftBarItem theme={darkTheme} onClick={() => onClick()}>
+			{prefName}
+		</SLeftBarItem>
+	);
 };
 
 const SLeftBarItem = styled.div`
