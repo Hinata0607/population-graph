@@ -2,6 +2,7 @@ import { themeProps } from '@/interfaces';
 
 // サイトのダークテーマ定義
 export const darkTheme: themeProps = {
+	primary: '#1E90FF',
 	layout: {
 		header: {
 			bg: '#121920',
