@@ -23,6 +23,11 @@ export default function Home() {
 }
 
 const SPage = styled.section`
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 30px;
 	width: 100%;
-	height: 100%;
+	padding: 30px 0;
 `;
