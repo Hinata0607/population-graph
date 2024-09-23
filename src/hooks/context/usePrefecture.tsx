@@ -7,10 +7,12 @@ import {
 import { axiosFetch } from '@/libs';
 import { Context } from '@/provider';
 import { useContext } from 'react';
+import { useGraph } from './useGraph';
 
 // 都道府県に関連するコンテキストデータを扱うhooks
 export const usePrefecture = (): UsePrefectureProps => {
 	const context = useContext(Context);
+	const { handleFetchPopulation } = useGraph();
 	if (!context) {
 		throw new Error('Context is not provided');
 	}
@@ -45,6 +47,9 @@ export const usePrefecture = (): UsePrefectureProps => {
 				return [...currentSelected, prefecture];
 			}
 		});
+
+		// 指定した都道府県のグラフデータが未登録であればフェッチして登録
+		handleFetchPopulation(prefecture.prefCode);
 	};
 
 	return {

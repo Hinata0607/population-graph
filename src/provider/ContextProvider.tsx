@@ -2,6 +2,7 @@
 import {
 	ContextGraphModeProps,
 	ContextProviderProps,
+	PopulationResponse,
 	PrefectureProps,
 } from '@/interfaces';
 import { darkTheme } from '@/theme';
@@ -21,6 +22,10 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 	>(null);
 	// ユーザーにより選択されたグラフモード
 	const [graphMode, setGraphMode] = useState<ContextGraphModeProps>('総人口');
+	// 都道府県別の人口推移率データ(prefCodeをキーにしたオブジェクトで管理)
+	const [population, setPopulation] = useState<{
+		[key: number]: PopulationResponse;
+	}>({});
 
 	const contextValue = {
 		prefecrtures,
@@ -29,6 +34,8 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 		setSelectedPrefectures,
 		graphMode,
 		setGraphMode,
+		population,
+		setPopulation,
 
 		darkTheme,
 	};

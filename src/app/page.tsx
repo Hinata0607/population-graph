@@ -29,5 +29,7 @@ const SPage = styled.section`
 	align-items: center;
 	gap: 30px;
 	width: 100%;
+	max-width: 1500px;
 	padding: 30px 0;
+	margin: 0 auto;
 `;

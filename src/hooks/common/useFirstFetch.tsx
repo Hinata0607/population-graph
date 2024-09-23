@@ -8,7 +8,7 @@ export const useFirstFetch = (): useFirstFetchProps => {
 
 	// 初回アクセス時のデータ取得関数
 	const handleFirstFetch = async (): Promise<void> => {
-		handleFetchPrefectures();
+		handleFetchPrefectures(); // 都道府県一覧の取得と保持。
 	};
 
 	return {

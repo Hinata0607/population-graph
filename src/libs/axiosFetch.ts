@@ -1,5 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
+// axiosライブラリの汎用関数です。
+// エラーハンドリングなどがまとめてあります。
+// コンテンツタイプなどの設定はデフォルトでjsonですが、上書き可能です。
+// レスポンスに型を定義する際は型ジェネリクスを使用してください。
 export const axiosFetch = {
 	post: async <T>(
 		url: string,
@@ -105,7 +109,7 @@ export const axiosFetch = {
 				...header,
 			},
 			method: 'DELETE',
-			data, // ボディを設定
+			data,
 			...configOverrides,
 		};
 

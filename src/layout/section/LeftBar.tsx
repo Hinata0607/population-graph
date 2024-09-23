@@ -9,24 +9,31 @@ export const LeftBar = () => {
 		usePrefecture();
 
 	return (
-		<SLeftBar theme={darkTheme}>
-			{prefecrtures?.map((prefecrtures) => (
-				<LeftBarItem
-					key={prefecrtures.prefCode}
-					prefName={prefecrtures.prefName}
-					isSelected={
-						selectedPrefectures
-							? selectedPrefectures.includes(prefecrtures)
-							: false
-					}
-					onClick={() => handleSelectPrefectures(prefecrtures)}
-				/>
-			))}
-		</SLeftBar>
+		<>
+			<SLeftBar theme={darkTheme}>
+				{prefecrtures?.map((prefecrtures) => (
+					<LeftBarItem
+						key={prefecrtures.prefCode}
+						prefName={prefecrtures.prefName}
+						isSelected={
+							selectedPrefectures
+								? selectedPrefectures.includes(prefecrtures)
+								: false
+						}
+						onClick={() => handleSelectPrefectures(prefecrtures)}
+					/>
+				))}
+			</SLeftBar>
+
+			<SWidth />
+		</>
 	);
 };
 
 const SLeftBar = styled.section`
+	position: fixed;
+	left: 0;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
@@ -48,4 +55,9 @@ const SLeftBar = styled.section`
 			display: block;
 		}
 	}
+`;
+
+const SWidth = styled.div`
+	width: 300px;
+	height: 100%;
 `;
