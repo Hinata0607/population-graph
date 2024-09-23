@@ -1,14 +1,17 @@
 'use client';
 import styled from 'styled-components';
 import { HeaderButton } from '../atom';
+import { useGraph } from '@/hooks/context/useGraph';
 
 export const HeaderCommands = () => {
+	const { graphMode } = useGraph();
+
 	return (
 		<SHeaderComands>
-			<HeaderButton title="総人口" />
-			<HeaderButton title="年少人口" />
-			<HeaderButton title="生産年齢人口" />
-			<HeaderButton title="老年人口" />
+			<HeaderButton selectedMode={graphMode} title="総人口" />
+			<HeaderButton selectedMode={graphMode} title="年少人口" />
+			<HeaderButton selectedMode={graphMode} title="生産年齢人口" />
+			<HeaderButton selectedMode={graphMode} title="老年人口" />
 		</SHeaderComands>
 	);
 };

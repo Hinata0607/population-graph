@@ -1,5 +1,9 @@
 'use client';
-import { ContextProviderProps, PrefectureProps } from '@/interfaces';
+import {
+	ContextGraphModeProps,
+	ContextProviderProps,
+	PrefectureProps,
+} from '@/interfaces';
 import { darkTheme } from '@/theme';
 import { ReactNode, createContext, useState } from 'react';
 
@@ -15,12 +19,16 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 	const [selectedPrefectures, setSelectedPrefectures] = useState<
 		PrefectureProps[] | null
 	>(null);
+	// ユーザーにより選択されたグラフモード
+	const [graphMode, setGraphMode] = useState<ContextGraphModeProps>('総人口');
 
 	const contextValue = {
 		prefecrtures,
 		setPrefectures,
 		selectedPrefectures,
 		setSelectedPrefectures,
+		graphMode,
+		setGraphMode,
 
 		darkTheme,
 	};

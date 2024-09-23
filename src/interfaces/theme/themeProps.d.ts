@@ -1,4 +1,5 @@
 export interface themeProps {
+	primary: string;
 	layout: {
 		header: {
 			bg: string;
