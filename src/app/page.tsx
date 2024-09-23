@@ -1,5 +1,5 @@
 'use client';
-import { Graph, PrefectureSelectSm } from '@/components';
+import { Graph, GraphModeAreaSm, PrefectureSelectSm } from '@/components';
 import { useBreakpoint, useFirstFetch } from '@/hooks';
 import { useEffect } from 'react';
 import styled from 'styled-components';
@@ -17,6 +17,7 @@ export default function Home() {
 		<SPage>
 			{isSm && <PrefectureSelectSm />}
 			<Graph />
+			{isSm && <GraphModeAreaSm />}
 		</SPage>
 	);
 }
