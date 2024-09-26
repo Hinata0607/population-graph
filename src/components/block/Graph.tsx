@@ -34,6 +34,7 @@ export const Graph = () => {
 	return (
 		<SGraphArea $breakpoint={breakpoint} theme={darkTheme}>
 			<Line
+				data-testid={`graph`}
 				data={graphData}
 				width="100%"
 				height="100%"
