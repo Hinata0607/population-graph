@@ -100,9 +100,6 @@ describe('Left Bar Item Component', () => {
 			});
 		});
 
-		// const selectedPrefectures = await screen.findByTestId('selected-prefecture');
-		// console.log(selectedPrefectures)
-
 		// クリック後selectedPrefecturesに{ prefCode: 1, prefName: '北海道' }が格納されているか確認
 		await waitFor(() => {
 			expect(result.current.selectedPrefectures).toContainEqual({
