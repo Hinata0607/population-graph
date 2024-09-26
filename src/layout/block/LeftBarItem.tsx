@@ -4,6 +4,7 @@ import { LeftBarItemProps, SLeftBarItemProps } from '@/interfaces';
 import styled from 'styled-components';
 
 export const LeftBarItem = ({
+	'data-testid': testId,
 	prefName,
 	isSelected,
 	onClick,
@@ -12,6 +13,7 @@ export const LeftBarItem = ({
 
 	return (
 		<SLeftBarItem
+			data-testid={testId}
 			theme={darkTheme}
 			$isSelected={isSelected}
 			onClick={() => onClick()}

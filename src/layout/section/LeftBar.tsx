@@ -13,6 +13,7 @@ export const LeftBar = () => {
 			<SLeftBar theme={darkTheme}>
 				{prefecrtures?.map((prefecrtures) => (
 					<LeftBarItem
+						data-testid={`left-bar-item-${prefecrtures.prefCode}`}
 						key={prefecrtures.prefCode}
 						prefName={prefecrtures.prefName}
 						isSelected={

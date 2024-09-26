@@ -1,6 +1,7 @@
 import { themeProps } from '@/interfaces/theme';
 
 export interface LeftBarItemProps {
+	'data-testid'?: string;
 	prefName: string;
 	isSelected: boolean;
 	onClick: () => void;
