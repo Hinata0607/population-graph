@@ -38,8 +38,9 @@ const SPrefectureBox = styled.div`
 `;
 
 const SLabel = styled.label`
-	lineheight: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
-	pointerevents: none;
 `;
