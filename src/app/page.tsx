@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 export default function Home() {
 	const breakpoint = useBreakpoint();
-	const isSm: boolean = ['xs', 'sm'].includes(breakpoint);
 	const { handleFirstFetch } = useFirstFetch();
+	const isSm: boolean = ['xs', 'sm'].includes(breakpoint);
 
 	useEffect(() => {
 		handleFirstFetch();
