@@ -105,13 +105,13 @@ export const useGraph = (): useGraphProps => {
 			x: {
 				title: {
 					display: true,
-					text: '人口数',
+					text: '年度',
 				},
 			},
 			y: {
 				title: {
 					display: true,
-					text: '年度',
+					text: '人口数',
 				},
 			},
 		},
