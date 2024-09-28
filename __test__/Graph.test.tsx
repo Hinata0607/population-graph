@@ -54,7 +54,6 @@ describe('renders the graph with provided data', () => {
 			graphOptions: mockGraphOptions,
 		});
 		(useTheme as jest.Mock).mockReturnValue(darkTheme);
-		console.log(mockGraphData); // モックデータの内容を確認
 	});
 
 	// グラフの描画がされているか

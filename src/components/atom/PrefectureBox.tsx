@@ -12,7 +12,7 @@ export const PrefectureBox = ({
 	const { darkTheme } = useTheme();
 
 	return (
-		<SPrefectureBox theme={darkTheme}>
+		<SPrefectureBox theme={darkTheme} data-testid={`checkbox-${prefCode}`}>
 			<input
 				type="checkbox"
 				id={prefCode.toString()}
