@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 
 export default function Home() {
-	const { handleFirstFetch } = useFirstFetch();
 	const breakpoint = useBreakpoint();
 	const isSm: boolean = ['xs', 'sm'].includes(breakpoint);
+	const { handleFirstFetch } = useFirstFetch();
 
 	useEffect(() => {
 		handleFirstFetch();
